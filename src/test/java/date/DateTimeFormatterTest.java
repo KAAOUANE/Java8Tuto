@@ -24,5 +24,9 @@ public class DateTimeFormatterTest {
         System.out.println(dateTime2);
         LocalDateTime dateTime3 = LocalDateTime.parse("2014-10-05T08:15:30+02:00", DateTimeFormatter.ISO_OFFSET_DATE_TIME);
         System.out.println(dateTime3);
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+        LocalDateTime dateTime = LocalDateTime.parse("2017-01-08 12:10", formatter);
+        System.out.println(dateTime);
     }
 }
