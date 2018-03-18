@@ -53,8 +53,10 @@ public class ListTest {
     @Test //seulemet List
     public void testSort() {
         //liste.sort(Integer::compareTo);
+        liste.forEach(System.out::print);
         liste.sort((a, b) -> a > b ? -1 : 1);
-        liste.forEach(System.out::println);
+        System.out.println();
+        liste.forEach(System.out::print);
     }
 
 }
