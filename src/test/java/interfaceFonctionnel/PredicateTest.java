@@ -14,15 +14,11 @@ import java.util.stream.Collectors;
 public class PredicateTest {
     @Test
     public void predicateTestTest() {
-        Predicate<Double> function = x -> x > 10;
-        Predicate<Double> function2 = x -> x < -10;
-        testValue(function,new Double(9));
-        testValue(function2,new Double(-20));
+        Predicate<Double> predicateSup10 = x -> x > 10;
+        Predicate<Double> predicateInf10 = x -> x < -10;
+        System.out.println(predicateSup10.test(9D));
+        System.out.println(predicateInf10.test(-20D));
     }
-    public static void testValue(Predicate<Double> predicate, Double d){
-        System.out.println(predicate.test(d));
-    }
-
 
 
     @Test
