@@ -70,6 +70,10 @@ public class Personne implements Comparable<Personne>  {
         this.book.add(book);
     }
 
+    public static String getStaticMethode(){
+        return "Je suis une methode static";
+    }
+
     @Override
     public String toString() {
         return  name+"/"+ville;

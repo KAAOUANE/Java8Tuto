@@ -23,12 +23,12 @@ public class StringTest {
 
     @Test
     public void testStringJoin() {
-        String.join(":", "foobar", "foo", "bar");
+        System.out.println(String.join(":", "ABC", "DEF", "GHI"));
     }
 
     @Test
     public void testCollectorsJoing() {
-        System.out.println("foobar:foo:bar"
+        System.out.println("def:abg:chi"
                 .chars()
                 .distinct()
                 .mapToObj(c -> String.valueOf((char) c))
@@ -39,7 +39,7 @@ public class StringTest {
     @Test
     public void testRegex() {
         Pattern pattern = Pattern.compile(".*@gmail\\.com");
-        Long nb=Stream.of("bob@gmail.com", "alice@hotmail.com")
+        Long nb=Stream.of("toto@gmail.com", "tata@hotmail.com")
                 .filter(pattern.asPredicate())
                 .count();
         System.out.println(nb);

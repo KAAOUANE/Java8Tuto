@@ -11,7 +11,20 @@ import java.util.concurrent.*;
  */
 public class OldInterfaceFunctionnel {
 
-    //exister deja des interface fonctionnel Runnable et Callable java 5
+    //exister deja des interface fonctionnel Runnable JDK1.0 et Callable java JDK1.5
+
+    @Test
+    public void RunnableOldJdk() {
+        Runnable r = new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("Bonjour de la part d'un autre Thread");
+            }
+        };
+        Thread th = new Thread(r);
+        th.start();
+    }
+
 
     @Test
     public void RunnableInterface() {
