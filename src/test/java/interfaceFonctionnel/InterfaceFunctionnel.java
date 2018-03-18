@@ -14,8 +14,6 @@ import java.util.List;
  */
 public class InterfaceFunctionnel {
 
-    //https://www.concretepage.com/java/jdk-8/functional-interface-in-java-8
-
     //La notions d'interface fonctionnelle est rétro-compatible. Cela signifie qu'une interface écrite en Java 7 (ou avant)
     // peut devenir une interface fonctionnelle dans une application Java 8, sans modification, ni même être recompilée.
 

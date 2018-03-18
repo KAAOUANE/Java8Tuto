@@ -13,16 +13,15 @@ import java.util.stream.Collectors;
  */
 public class PredicateTest {
     @Test
-    public void predicateTestTest() {
+    public void evaluatePredicate() {
         Predicate<Double> predicateSup10 = x -> x > 10;
         Predicate<Double> predicateInf10 = x -> x < -10;
         System.out.println(predicateSup10.test(9D));
         System.out.println(predicateInf10.test(-20D));
     }
 
-
     @Test
-    public void evaluatePredicate() {
+    public void evaluateNegatePredicate() {
         Predicate<Integer> psup2 = x -> x > 2;
         System.out.println(psup2.negate().test(1));
         System.out.println(psup2.test(1));

@@ -10,14 +10,14 @@ import java.util.List;
  */
 public class StreamPeekForEachTest {
     /*Un stream est un objet qui sert a definir des operations
-      a une source de donnee
-      ne modifie pas la source
-      traitement est optimise
+      - a une source de donnee
+      - ne modifie pas la source
+      - traitement est optimise
     */
 
     //distinct sort bufferiser
     //limit skip gere un compteur
-    List<Integer> list = Arrays.asList(1, 2, 3, 4);
+    List<Integer> list = Arrays.asList(1, 4, 3, 2);
 
     @Test
     public void streamPeek() {

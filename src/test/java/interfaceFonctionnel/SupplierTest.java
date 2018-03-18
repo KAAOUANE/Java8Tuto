@@ -16,12 +16,11 @@ public class SupplierTest {
     public void supplierGetTest() {
         Supplier<String> supplier1 = () -> "String1";
         Supplier<String> supplier2 = () -> "String2";
-        printSuppliedString(supplier1);
-        printSuppliedString(supplier2);
+        Supplier<String> supplier3 = () -> null;
+        System.out.println(supplier1.get());
+        System.out.println(supplier2.get());
+        System.out.println(supplier3.get());
     }
 
-    public static void printSuppliedString(Supplier<String> supplier){
-        System.out.println(supplier.get());
-    }
 
 }
