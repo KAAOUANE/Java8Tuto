@@ -1,23 +1,26 @@
 package stream;
 
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Set;
 
 /**
  * Created by admin on 13/03/2018.
  */
-public class Personne {
+public class Personne implements Comparable<Personne>  {
     String name;
     String ville;
     String email;
+    Integer numero;
 
     private Set<String> book;
 
 
-    public Personne(String email, String name, String ville) {
+    public Personne(String email, String name, String ville,Integer numero) {
         this.email = email;
         this.name = name;
         this.ville = ville;
+        this.numero = numero;
     }
 
     public String getName() {
@@ -48,6 +51,14 @@ public class Personne {
         return book;
     }
 
+    public Integer getNumero() {
+        return numero;
+    }
+
+    public void setNumero(Integer numero) {
+        this.numero = numero;
+    }
+
     public void setBook(Set<String> book) {
         this.book = book;
     }
@@ -62,5 +73,10 @@ public class Personne {
     @Override
     public String toString() {
         return  name+"/"+ville;
+    }
+
+    @Override
+    public int compareTo(Personne o) {
+        return this.numero.compareTo(o.numero);
     }
 }

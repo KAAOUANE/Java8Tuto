@@ -16,14 +16,14 @@ public class CollectorsTest {
 
     @Before
     public void init() {
-        liste.add(new Personne("v1@v1.fr","V1", "VENISSIEUX"));
-        liste.add(new Personne("l2@l2.fr","L2", "LYON"));
-        liste.add(new Personne("l1@l1.fr","L1", "LYON"));
-        liste.add(new Personne("m1@m1.fr","M1", "MARSEILLE"));
-        liste.add(new Personne("p1@p1.fr","P1", "PARIS"));
-        liste.add(new Personne("v2@v2.fr","V2", "VENISSIEUX"));
-        liste.add(new Personne("p2@p2.fr","P2", "PARIS"));
-        liste.add(new Personne("l3@l3.fr","L3", "LYON"));
+        liste.add(new Personne("v1@v1.fr","V1", "VENISSIEUX",1));
+        liste.add(new Personne("l2@l2.fr","L2", "LYON",2));
+        liste.add(new Personne("l1@l1.fr","L1", "LYON",3));
+        liste.add(new Personne("m1@m1.fr","M1", "MARSEILLE",4));
+        liste.add(new Personne("p1@p1.fr","P1", "PARIS",6));
+        liste.add(new Personne("v2@v2.fr","V2", "VENISSIEUX",5));
+        liste.add(new Personne("p2@p2.fr","P2", "PARIS",9));
+        liste.add(new Personne("l3@l3.fr","L3", "LYON",8));
     }
     @Test
     public void CollectorsListToMap() {
@@ -33,7 +33,7 @@ public class CollectorsTest {
 
     @Test
     public void CollectorsListToMapWithSupplier() {
-        liste.add(new Personne("2 eme l1@l1.fr","L1", "LYON"));
+        liste.add(new Personne("2 eme l1@l1.fr","L1", "LYON",2));
         Map<String, Object> map = liste.stream().collect(Collectors.toMap(Personne::getName, Personne::getEmail,
                 (x, y) -> x+", "+ y, LinkedHashMap::new));
         map.forEach((x, y) -> System.out.println("Key: " + x + ", value: " + y));
